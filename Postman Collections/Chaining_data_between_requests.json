@@ -1,0 +1,374 @@
+{
+  "info": {
+    "_postman_id": "8aa7e3aa-e07a-4783-8003-d5fafaf52b27",
+    "name": "Chaining data between requests",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Postman Echo GET",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "78dfa449-7ac2-4a92-8c1b-348bdded4f2c",
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "e0cdd010-1335-41cb-ab33-5e921117fb87",
+            "exec": [
+              "// Parsing the response returned by the request.",
+              "var jsonData = pm.response.json();",
+              "",
+              "// Extracting the token from the response and setting it as a global variable.",
+              "pm.globals.set(\"newToken\", jsonData.headers['postman-token']);"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "_postman_id": "bede60d2-f94b-42a3-8562-be3c538b8272",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "https://postman-echo.com/get"
+      },
+      "response": []
+    },
+    {
+      "name": "Postman Echo POST",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "a71f6290-726a-4977-95f7-6a6acb0e7d74",
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "_postman_id": "e88a319e-9d74-40b6-ad7d-02b2ac316138",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"method\": \"POST\"\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "https://postman-echo.com/post"
+      },
+      "response": [
+        {
+          "id": "101e37b5-6f41-4d81-b322-00ff1f3dc422",
+          "name": "Success response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"method\": \"POST\"\n}"
+            },
+            "url": "https://postman-echo.com/post"
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 04 Oct 2018 13:16:50 GMT"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"21a-6y1+9dLw9Ui/9TFPCS1aNOaKU38\""
+            },
+            {
+              "key": "Server",
+              "value": "nginx"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "Content-Length",
+              "value": "376"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "responseTime": null,
+          "body": "{\n    \"args\": {},\n    \"data\": {\n        \"method\": \"POST\"\n    },\n    \"files\": {},\n    \"form\": {},\n    \"headers\": {\n        \"host\": \"postman-echo.com\",\n        \"content-length\": \"21\",\n        \"accept\": \"*/*\",\n        \"accept-encoding\": \"gzip, deflate\",\n        \"cache-control\": \"no-cache\",\n        \"content-type\": \"application/json\",\n        \"cookie\": \"sails.sid=s%3AG10mxUHVB65q6zAdIPRPk7kAxyMNpmeM.tn9m63fNTjoJBYkiUShtDIIliVwslI4ys8tvItjT2%2BA\",\n        \"postman-token\": \"e96e5264-9de6-4aa6-8737-3ab5489d561c\",\n        \"user-agent\": \"PostmanRuntime/7.3.0\",\n        \"x-forwarded-port\": \"443\",\n        \"x-forwarded-proto\": \"https\"\n    },\n    \"json\": {\n        \"method\": \"POST\"\n    },\n    \"url\": \"https://postman-echo.com/post\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Postman Echo PUT",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "b487a44e-74ac-4391-ade5-a6f11f40209c",
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "_postman_id": "489bea1b-576b-4b4f-a60c-9f8e255435c0",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"method\": \"PUT\"\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "https://postman-echo.com/put"
+      },
+      "response": [
+        {
+          "id": "514cce53-4ea5-4999-9c98-5fe6a6a11618",
+          "name": "Success response",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"method\": \"PUT\"\n}"
+            },
+            "url": "https://postman-echo.com/put"
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 04 Oct 2018 13:17:17 GMT"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"217-JGHStdnnh3wMqCvlmgLBtwwN4Fo\""
+            },
+            {
+              "key": "Server",
+              "value": "nginx"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "Content-Length",
+              "value": "376"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "responseTime": null,
+          "body": "{\n    \"args\": {},\n    \"data\": {\n        \"method\": \"PUT\"\n    },\n    \"files\": {},\n    \"form\": {},\n    \"headers\": {\n        \"host\": \"postman-echo.com\",\n        \"content-length\": \"20\",\n        \"accept\": \"*/*\",\n        \"accept-encoding\": \"gzip, deflate\",\n        \"cache-control\": \"no-cache\",\n        \"content-type\": \"application/json\",\n        \"cookie\": \"sails.sid=s%3AG10mxUHVB65q6zAdIPRPk7kAxyMNpmeM.tn9m63fNTjoJBYkiUShtDIIliVwslI4ys8tvItjT2%2BA\",\n        \"postman-token\": \"7024cdc0-4e44-40c6-9c96-25c68caf4c59\",\n        \"user-agent\": \"PostmanRuntime/7.3.0\",\n        \"x-forwarded-port\": \"443\",\n        \"x-forwarded-proto\": \"https\"\n    },\n    \"json\": {\n        \"method\": \"PUT\"\n    },\n    \"url\": \"https://postman-echo.com/put\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Postman Echo DELETE",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "e4a1743e-5927-435c-89a9-e7d0889d4c50",
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "_postman_id": "2d6b8b7e-5c74-4a37-915b-5ed021a9e3cb",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"method\": \"DELETE\"\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "https://postman-echo.com/delete"
+      },
+      "response": [
+        {
+          "id": "668363a4-2256-4a9a-aada-7105aa864ed4",
+          "name": "Success response",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"method\": \"DELETE\"\n}"
+            },
+            "url": "https://postman-echo.com/delete"
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 04 Oct 2018 13:18:26 GMT"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"222-EaECC84U8vKhL8mPSvAGY65VBbc\""
+            },
+            {
+              "key": "Server",
+              "value": "nginx"
+            },
+            {
+              "key": "set-cookie",
+              "value": "sails.sid=s%3AcoeBrm0wyZAGMQpoxU7JX2keD4frWnPC.KqL1VbDNV8BVsT4ru1qfXLpbuloRyzdCwDKlWRbzUIA; Path=/; HttpOnly"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "Content-Length",
+              "value": "383"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "responseTime": null,
+          "body": "{\n    \"args\": {},\n    \"data\": {\n        \"method\": \"DELETE\"\n    },\n    \"files\": {},\n    \"form\": {},\n    \"headers\": {\n        \"host\": \"postman-echo.com\",\n        \"content-length\": \"23\",\n        \"accept\": \"*/*\",\n        \"accept-encoding\": \"gzip, deflate\",\n        \"cache-control\": \"no-cache\",\n        \"content-type\": \"application/json\",\n        \"cookie\": \"sails.sid=s%3ApG9SWO0OWeJMy_NIh2B_S4miHdP4l8x7.MaILgH0cG%2Fn9vprO60ke%2FopJhgNjqdUzdB0azeSEi38\",\n        \"postman-token\": \"06f28999-e374-474d-a830-506b1afe64e2\",\n        \"user-agent\": \"PostmanRuntime/7.3.0\",\n        \"x-forwarded-port\": \"443\",\n        \"x-forwarded-proto\": \"https\"\n    },\n    \"json\": {\n        \"method\": \"DELETE\"\n    },\n    \"url\": \"https://postman-echo.com/delete\"\n}"
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "4205b801-9e6c-4d30-a2c9-29404f43bc00",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "d3590cc5-1d45-4644-9067-381b55372395",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
+}
