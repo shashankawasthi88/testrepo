@@ -1,0 +1,747 @@
+{
+  "info": {
+    "_postman_id": "b571b530-d14a-4d73-913f-c894c14f4fcf",
+    "name": "Public SOAP APIs",
+    "description": "This is a collection of different SOAP APIs that are completley public and do not require any authentication, making it easier for consumers to play with and understand what APIs are all about by seeing the many different ways in which APIs can be used.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Numbers",
+      "item": [
+        {
+          "name": "NumberToWords",
+          "_postman_id": "631f0d5a-d7cc-4464-95b4-587850dc236b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "text/xml; charset=utf-8",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <NumberToWords xmlns=\"http://www.dataaccess.com/webservicesserver/\">\n      <ubiNum>500</ubiNum>\n    </NumberToWords>\n  </soap:Body>\n</soap:Envelope>",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "https://www.dataaccess.com/webservicesserver/NumberConversion.wso",
+            "description": "Returns the word corresponding to the positive number passed as parameter. Limited to quadrillions."
+          },
+          "response": []
+        },
+        {
+          "name": "NumberToDollars",
+          "_postman_id": "3d10e2ab-29d5-4ad5-b3b0-56288de3f44b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "type": "text",
+                "value": "text/xml; charset=utf-8"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <NumberToDollars xmlns=\"http://www.dataaccess.com/webservicesserver/\">\n      <dNum>500</dNum>\n    </NumberToDollars>\n  </soap:Body>\n</soap:Envelope>",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "https://www.dataaccess.com/webservicesserver/NumberConversion.wso",
+            "description": "Returns the non-zero dollar amount of the passed number."
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "e58d758a-9a37-413e-967e-072c6f3b0a58",
+      "description": "Some basic numbers requests."
+    },
+    {
+      "name": "Calculator",
+      "item": [
+        {
+          "name": "Add",
+          "_postman_id": "cb20ec83-6817-4425-9cad-bc0f45465712",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "text/xml; charset=utf-8",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <NumberToWords xmlns=\"http://www.dataaccess.com/webservicesserver/\">\n      <ubiNum>500</ubiNum>\n    </NumberToWords>\n  </soap:Body>\n</soap:Envelope>",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "https://www.dataaccess.com/webservicesserver/NumberConversion.wso",
+            "description": "Adds two integers."
+          },
+          "response": []
+        },
+        {
+          "name": "NumberToDollars",
+          "_postman_id": "de7e3381-f963-4760-97fd-98f07ac1af27",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "type": "text",
+                "value": "text/xml; charset=utf-8"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <NumberToDollars xmlns=\"http://www.dataaccess.com/webservicesserver/\">\n      <dNum>500</dNum>\n    </NumberToDollars>\n  </soap:Body>\n</soap:Envelope>",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "https://www.dataaccess.com/webservicesserver/NumberConversion.wso",
+            "description": "Returns the non-zero dollar amount of the passed number."
+          },
+          "response": []
+        },
+        {
+          "name": "Divide",
+          "_postman_id": "fb9c7b91-2742-441b-9071-2ffdc2fb3227",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "text/xml; charset=utf-8",
+                "type": "text"
+              },
+              {
+                "key": "SOAPAction",
+                "value": "http://tempuri.org/Divide",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <Divide xmlns=\"http://tempuri.org/\">\n      <intA>5</intA>\n      <intB>5</intB>\n    </Divide>\n  </soap:Body>\n</soap:Envelope>",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "http://www.dneonline.com/calculator.asmx",
+            "description": "Divides two integers."
+          },
+          "response": []
+        },
+        {
+          "name": "Multiply",
+          "_postman_id": "d4114fc3-6c02-4c77-a0a0-5684b3e3537c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "text/xml; charset=utf-8",
+                "type": "text"
+              },
+              {
+                "key": "SOAPAction",
+                "value": "http://tempuri.org/Multiply",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <Multiply xmlns=\"http://tempuri.org/\">\n      <intA>5</intA>\n      <intB>5</intB>\n    </Multiply>\n  </soap:Body>\n</soap:Envelope>",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "http://www.dneonline.com/calculator.asmx",
+            "description": "Multiplies two integers."
+          },
+          "response": []
+        },
+        {
+          "name": "Subtract",
+          "_postman_id": "215979d7-0c92-4a5f-8139-3c76eefed558",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "text/xml; charset=utf-8",
+                "type": "text"
+              },
+              {
+                "key": "SOAPAction",
+                "value": "http://tempuri.org/Subtract",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <Subtract xmlns=\"http://tempuri.org/\">\n      <intA>5</intA>\n      <intB>5</intB>\n    </Subtract>\n  </soap:Body>\n</soap:Envelope>",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "http://www.dneonline.com/calculator.asmx",
+            "description": "Subtracts two integers."
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "5cacd521-970b-4c27-bd1c-685c6acac217",
+      "description": "A simple SOAP API calculator.",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ],
+            "id": "395e90f5-35b1-4934-a990-98598727f194"
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ],
+            "id": "c00e13e4-c325-4dac-a894-ca1c7832bc04"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Continents",
+      "item": [
+        {
+          "name": "List of Continents by Name",
+          "_postman_id": "900555ae-aef1-45ea-b865-e8db05605b81",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "text/xml; charset=utf-8",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap12:Envelope xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\n  <soap12:Body>\n    <ListOfContinentsByName xmlns=\"http://www.oorsprong.org/websamples.countryinfo\">\n    </ListOfContinentsByName>\n  </soap12:Body>\n</soap12:Envelope>",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso",
+            "description": "Returns a list of continents ordered by name."
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "7b907dfd-2d91-4875-b366-b355b08ad3e5",
+      "description": "Some weather APIs for the United States.",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ],
+            "id": "94fca6d2-222a-4160-9a7f-e464a63d709b"
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ],
+            "id": "3f12c4da-cae9-445b-9687-e1fca989d1cc"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Countries",
+      "item": [
+        {
+          "name": "List of Countries by Name",
+          "_postman_id": "590544b3-a7e4-43b7-8101-686f101a2864",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "type": "text",
+                "value": "text/xml; charset=utf-8"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap12:Envelope xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\n  <soap12:Body>\n    <ListOfCountryNamesByName xmlns=\"http://www.oorsprong.org/websamples.countryinfo\">\n    </ListOfCountryNamesByName>\n  </soap12:Body>\n</soap12:Envelope>",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso",
+            "description": "Returns a list of countries ordered by name."
+          },
+          "response": []
+        },
+        {
+          "name": "Captial City for a Country",
+          "_postman_id": "2ce02063-7ab2-4318-bc45-72d5e1ed75f1",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "type": "text",
+                "value": "text/xml; charset=utf-8"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <CapitalCity xmlns=\"http://www.oorsprong.org/websamples.countryinfo\">\n      <sCountryISOCode>US</sCountryISOCode>\n    </CapitalCity>\n  </soap:Body>\n</soap:Envelope>",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso",
+            "description": "Returns the name of the captial city for the passed country code."
+          },
+          "response": []
+        },
+        {
+          "name": "Currency for a Country",
+          "_postman_id": "23c118e2-9f71-41bf-a6c9-699131841d81",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "type": "text",
+                "value": "text/xml; charset=utf-8"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <CountryCurrency xmlns=\"http://www.oorsprong.org/websamples.countryinfo\">\n      <sCountryISOCode>US</sCountryISOCode>\n    </CountryCurrency>\n  </soap:Body>\n</soap:Envelope>",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso",
+            "description": "Returns the currency ISO code and name for the passed country ISO code."
+          },
+          "response": []
+        },
+        {
+          "name": "Flag for a Country",
+          "_postman_id": "64cb48d7-b8df-434a-aa63-9f0bc3fa32e1",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "type": "text",
+                "value": "text/xml; charset=utf-8"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <CountryFlag xmlns=\"http://www.oorsprong.org/websamples.countryinfo\">\n      <sCountryISOCode>US</sCountryISOCode>\n    </CountryFlag>\n  </soap:Body>\n</soap:Envelope>",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso",
+            "description": "Returns a link to a picture of the country flag"
+          },
+          "response": []
+        },
+        {
+          "name": "International Phone Code for a Country Copy",
+          "_postman_id": "5211583c-75fe-45fe-a546-e95ac1be3b2e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "type": "text",
+                "value": "text/xml; charset=utf-8"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <CountryIntPhoneCode xmlns=\"http://www.oorsprong.org/websamples.countryinfo\">\n      <sCountryISOCode>US</sCountryISOCode>\n    </CountryIntPhoneCode>\n  </soap:Body>\n</soap:Envelope>",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso",
+            "description": "Returns the internation phone code for the passed ISO country code."
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "a6dd8d1f-8b1f-4141-a51c-dc860276ee0b",
+      "description": "Country SOAP APIs.",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ],
+            "id": "5686d45a-3a07-4705-bcc3-0503c823c253"
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ],
+            "id": "61dd3bd6-9d5b-4a0e-bf5d-1125a2efabc8"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Currencies",
+      "item": [
+        {
+          "name": "List of Currencies by Name",
+          "_postman_id": "24e1df41-543a-437d-948f-0304fd4acc3a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "type": "text",
+                "value": "text/xml; charset=utf-8"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap12:Envelope xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\n  <soap12:Body>\n    <ListOfCurrenciesByName xmlns=\"http://www.oorsprong.org/websamples.countryinfo\">\n    </ListOfCurrenciesByName>\n  </soap12:Body>\n</soap12:Envelope>",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso",
+            "description": "Returns a list of currencies ordered by name."
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "2f313c80-a487-44f6-9edb-a37a20ff7e9f",
+      "description": "Returns a list of currencies ordered by name.",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ],
+            "id": "16c072b2-6874-4f2c-8f65-3be44e3a5280"
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ],
+            "id": "79c3dc07-ddc1-4475-836c-ee4be5461c2d"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Languages",
+      "item": [
+        {
+          "name": "List of Languages by Name",
+          "_postman_id": "d19095e1-31b9-4edf-8403-decff9478034",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "type": "text",
+                "value": "text/xml; charset=utf-8"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <ListOfLanguagesByName xmlns=\"http://www.oorsprong.org/websamples.countryinfo\">\n    </ListOfLanguagesByName>\n  </soap:Body>\n</soap:Envelope>",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso",
+            "description": "Returns an array of languages ordered by name."
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "b7d17457-1eb9-4976-85c2-c26e5ec06bf6",
+      "description": "SOAP APIs for languages around the world.",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ],
+            "id": "14c39842-a60a-41a9-850a-3a631e23c7a1"
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ],
+            "id": "a14bfcd3-19d2-41cc-8e1a-81a6cc9a51a3"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Book ISBN Numbers",
+      "item": [
+        {
+          "name": "Is Valid ISBN13 Number",
+          "_postman_id": "b40bf1fc-cc96-4b0c-a0cd-73487db33660",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "type": "text",
+                "value": "text/xml; charset=utf-8"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <IsValidISBN13 xmlns=\"http://webservices.daehosting.com/ISBN\">\n      <sISBN>978-1-4612-9090-2</sISBN>\n    </IsValidISBN13>\n  </soap:Body>\n</soap:Envelope>",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "http://webservices.daehosting.com/services/isbnservice.wso",
+            "description": "The test is done by calculation on the first 12 digits and compare the result with the checksum number at the end. You have to pass a 13 digits number."
+          },
+          "response": []
+        },
+        {
+          "name": "Is Valid ISBN10 Number",
+          "_postman_id": "b2231a85-178d-4bbd-b535-6c369dbde70a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "type": "text",
+                "value": "text/xml; charset=utf-8"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <IsValidISBN10 xmlns=\"http://webservices.daehosting.com/ISBN\">\n      <sISBN>0-19-852663-6</sISBN>\n    </IsValidISBN10>\n  </soap:Body>\n</soap:Envelope>",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "http://webservices.daehosting.com/services/isbnservice.wso",
+            "description": "The test is done by calculation on the first 9 digits and compare the result with the checksum number at the end. You have to pass a 10 digits number or 8 digits and an X."
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "110aff65-6a27-41d3-bc0a-1ec88e4556e0",
+      "description": "SOAP APIs for book ISBN numbers.",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ],
+            "id": "aa86efcc-b975-4408-a5c0-b541c4e9f77b"
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ],
+            "id": "13d2a241-1df4-4539-b446-aeb1c52c3903"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Temperature",
+      "item": [
+        {
+          "name": "Celsius to Farenheit Conversion",
+          "_postman_id": "e728337d-28ac-4027-a469-f71c00d724fa",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/soap+xml; charset=utf-8",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\n  <soap12:Body>\n    <CelsiusToFahrenheit xmlns=\"https://www.w3schools.com/xml/\">\n      <Celsius>20</Celsius>\n    </CelsiusToFahrenheit>\n  </soap12:Body>\n</soap12:Envelope>",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "https://www.w3schools.com/xml/tempconvert.asmx",
+            "description": "Converts celsius temperature to farenheit."
+          },
+          "response": []
+        },
+        {
+          "name": "Farenheit to Celsius Conversion",
+          "_postman_id": "58447398-552b-4596-b384-841c6cac9c9d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "type": "text",
+                "value": "application/soap+xml; charset=utf-8"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\n  <soap12:Body>\n    <FahrenheitToCelsius xmlns=\"https://www.w3schools.com/xml/\">\n      <Fahrenheit>75</Fahrenheit>\n    </FahrenheitToCelsius>\n  </soap12:Body>\n</soap12:Envelope>",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "https://www.w3schools.com/xml/tempconvert.asmx",
+            "description": "Converts farenheit temperature to celsius."
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "359df1b4-bee3-487c-abb1-056a26ae459b"
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ],
+        "id": "632ee6b3-4b6d-4d3d-b0b3-d6d160030d84"
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ],
+        "id": "b3fbfd5a-d1df-4e40-9e08-52ab5e3fccbb"
+      }
+    }
+  ]
+}
