@@ -1,0 +1,484 @@
+{
+  "info": {
+    "_postman_id": "305de081-1bc0-40f3-a991-973ca4eb820a",
+    "name": "TestCollection1",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "First Request",
+      "_postman_id": "91c34dc3-bc9a-4987-9d9b-6372f75648c6",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "",
+        "description": "The first request for testing"
+      },
+      "response": []
+    },
+    {
+      "name": "Test Request2",
+      "_postman_id": "6da5035c-eac1-4277-b5a0-90f48f8326f1",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "https://gorest.co.in/public-api/users"
+      },
+      "response": []
+    },
+    {
+      "name": "Test Request 3",
+      "_postman_id": "16598f4c-dcda-4f84-a1cb-6e475e528184",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "oauth2",
+          "oauth2": {
+            "accessToken": "01aef8e1e5f531fb5d2d6433136f194432e9f5331f13a2f4f0eeff91e89e8dc6",
+            "addTokenTo": "header"
+          }
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\":\"Shashank Awasthi\", \"gender\":\"Male\", \"email\":\"XYZ@gmail.com\", \"status\":\"Active\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "https://gorest.co.in/public-api/users"
+      },
+      "response": [
+        {
+          "id": "aa974878-bd26-493d-ba30-a760e0e0b35f",
+          "name": "Test Request 3",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\":\"Shashank Awasthi\", \"gender\":\"Male\", \"email\":\"XYZ@gmail.com\", \"status\":\"Active\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "https://gorest.co.in/public-api/users"
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Server",
+              "value": "nginx"
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 21 Aug 2020 06:57:05 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "SAMEORIGIN"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "sameorigin"
+            },
+            {
+              "key": "X-XSS-Protection",
+              "value": "1; mode=block"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "X-Download-Options",
+              "value": "noopen"
+            },
+            {
+              "key": "X-Permitted-Cross-Domain-Policies",
+              "value": "none"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "strict-origin-when-cross-origin"
+            },
+            {
+              "key": "Location",
+              "value": "https://gorest.co.in/public-api/users/1410"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"fc6b23a6394fabb64fc88e1fc17b3d2a\""
+            },
+            {
+              "key": "Cache-Control",
+              "value": "max-age=0, private, must-revalidate"
+            },
+            {
+              "key": "X-Request-Id",
+              "value": "38d4d0c2-0007-4dfc-848e-92fa976d2a76"
+            },
+            {
+              "key": "X-Runtime",
+              "value": "0.011605"
+            },
+            {
+              "key": "Strict-Transport-Security",
+              "value": "max-age=31536000; includeSubDomains"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            }
+          ],
+          "cookie": [],
+          "responseTime": null,
+          "body": "{\n    \"code\": 201,\n    \"meta\": null,\n    \"data\": {\n        \"id\": 1410,\n        \"name\": \"Shashank Awasthi\",\n        \"email\": \"XYZ@gmail.com\",\n        \"gender\": \"Male\",\n        \"status\": \"Active\",\n        \"created_at\": \"2020-08-21T12:27:05.738+05:30\",\n        \"updated_at\": \"2020-08-21T12:27:05.738+05:30\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "https://ms1frkqnsp7r.statuspage.io/api/v2/status.json",
+      "_postman_id": "94d4ab50-802f-475d-84bc-f371d58c12dc",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36"
+          },
+          {
+            "key": "Accept",
+            "value": "*/*"
+          }
+        ],
+        "url": "https://ms1frkqnsp7r.statuspage.io/api/v2/status.json"
+      },
+      "response": []
+    },
+    {
+      "name": "https://ms1frkqnsp7r.statuspage.io/embed/frame.json",
+      "_postman_id": "b2d3f462-a704-4a41-9eb8-b27f7463ecfd",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json;charset=UTF-8"
+          },
+          {
+            "key": "Accept",
+            "value": "*/*"
+          }
+        ],
+        "url": "https://ms1frkqnsp7r.statuspage.io/embed/frame.json"
+      },
+      "response": []
+    },
+    {
+      "name": "https://postman.looker.com/api/internal/session/heartbeat",
+      "_postman_id": "92c83c7f-e952-4d27-ae96-67057582a228",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "x-b3-spanid",
+            "value": "92bdd053dd038277"
+          },
+          {
+            "key": "x-csrf-token",
+            "value": "dBJQLEcQ1XZ6ZK4qPqeopafswWJHwYmz2tclT2sczvA="
+          },
+          {
+            "key": "x-b3-sampled",
+            "value": "0"
+          },
+          {
+            "key": "x-b3-traceid",
+            "value": "5f44fec5919ad14392bdd053dd038277"
+          },
+          {
+            "key": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36"
+          },
+          {
+            "key": "Content-Type",
+            "value": "text/plain;charset=UTF-8"
+          },
+          {
+            "key": "Accept",
+            "value": "*/*"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "https://postman.looker.com/api/internal/session/heartbeat"
+      },
+      "response": []
+    },
+    {
+      "name": "https://ms1frkqnsp7r.statuspage.io/api/v2/status.json",
+      "_postman_id": "934123a6-a6be-4a38-bd03-00042f91cd6d",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36"
+          },
+          {
+            "key": "Accept",
+            "value": "*/*"
+          }
+        ],
+        "url": "https://ms1frkqnsp7r.statuspage.io/api/v2/status.json"
+      },
+      "response": []
+    },
+    {
+      "name": "https://ms1frkqnsp7r.statuspage.io/embed/frame.json",
+      "_postman_id": "f8d4666a-c247-443b-8693-e844cf1ede89",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json;charset=UTF-8"
+          },
+          {
+            "key": "Accept",
+            "value": "*/*"
+          }
+        ],
+        "url": "https://ms1frkqnsp7r.statuspage.io/embed/frame.json"
+      },
+      "response": []
+    },
+    {
+      "name": "https://postman.looker.com/api/internal/session/heartbeat",
+      "_postman_id": "45fb7130-1825-4d65-b0bf-b37987b6f1d8",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "x-b3-spanid",
+            "value": "92bdd053dd038277"
+          },
+          {
+            "key": "x-csrf-token",
+            "value": "dBJQLEcQ1XZ6ZK4qPqeopafswWJHwYmz2tclT2sczvA="
+          },
+          {
+            "key": "x-b3-sampled",
+            "value": "0"
+          },
+          {
+            "key": "x-b3-traceid",
+            "value": "5f44fec5919ad14392bdd053dd038277"
+          },
+          {
+            "key": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36"
+          },
+          {
+            "key": "Content-Type",
+            "value": "text/plain;charset=UTF-8"
+          },
+          {
+            "key": "Accept",
+            "value": "*/*"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "https://postman.looker.com/api/internal/session/heartbeat"
+      },
+      "response": []
+    },
+    {
+      "name": "https://www.postman.com/use-cases/api-development/",
+      "_postman_id": "3f0ac531-6a64-471e-99fa-c63e0487d384",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+          },
+          {
+            "key": "Upgrade-Insecure-Requests",
+            "value": "1"
+          },
+          {
+            "key": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36"
+          }
+        ],
+        "url": "https://www.postman.com/use-cases/api-development/"
+      },
+      "response": []
+    },
+    {
+      "name": "https://www.postman.com/page-data/use-cases/api-development/page-data.json",
+      "_postman_id": "c649da6e-1558-4737-a8a6-1e34170d8424",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "*/*"
+          },
+          {
+            "key": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36"
+          }
+        ],
+        "url": "https://www.postman.com/page-data/use-cases/api-development/page-data.json"
+      },
+      "response": []
+    },
+    {
+      "name": "https://www.postman.com/page-data/app-data.json",
+      "_postman_id": "560cb83f-399d-4097-bf09-5c04ea6e972b",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "*/*"
+          },
+          {
+            "key": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36"
+          }
+        ],
+        "url": "https://www.postman.com/page-data/app-data.json"
+      },
+      "response": []
+    },
+    {
+      "name": "https://www.postman.com/d63d60f364b0405df412ce98f0580c84d8b1ae0b-0b2361853d3d613f460f.js",
+      "_postman_id": "c2f114e6-ca79-4fd9-85c5-0debc9a7145f",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "*/*"
+          },
+          {
+            "key": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36"
+          }
+        ],
+        "url": "https://www.postman.com/d63d60f364b0405df412ce98f0580c84d8b1ae0b-0b2361853d3d613f460f.js"
+      },
+      "response": []
+    },
+    {
+      "name": "https://www.postman.com/component---src-templates-split-template-jsx-1596b6bed69f7164cf2a.js",
+      "_postman_id": "e150af8f-6fd8-4db4-8a39-f2ffc40c7c74",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "*/*"
+          },
+          {
+            "key": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36"
+          }
+        ],
+        "url": "https://www.postman.com/component---src-templates-split-template-jsx-1596b6bed69f7164cf2a.js"
+      },
+      "response": []
+    }
+  ]
+}
