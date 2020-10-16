@@ -1,0 +1,98 @@
+{
+  "info": {
+    "_postman_id": "29092b02-08d7-44da-9762-5f0dea3e81ce",
+    "name": "Visualizer example - Table",
+    "description": "This collection shows how you can render your API data as a HTML table.\n\nLook under the \"Tests\" tab of the request in this collection to get a sense of things.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Table view",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "f93d7c58-adb2-4bb5-b8c7-1b2004a12f07",
+            "exec": [
+              "var template = `",
+              "    <style type=\"text/css\">",
+              "        .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}",
+              "        .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}",
+              "        .tftable tr {background-color:#ffffff;}",
+              "        .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}",
+              "        .tftable tr:hover {background-color:#e0ffff;}",
+              "    </style>",
+              "    ",
+              "    <table class=\"tftable\" border=\"1\">",
+              "        <tr>",
+              "            <th>Name</th>",
+              "            <th>Email</th>",
+              "        </tr>",
+              "        ",
+              "        {{#each response.data.contacts}}",
+              "            <tr id=row_{{@key}} onClick=\"handleClick(this.id)\">",
+              "                <td id={{@key}}>{{name}}</td>",
+              "                <td>{{email}}</td>",
+              "            </tr>",
+              "        {{/each}}",
+              "    </table>",
+              "`;",
+              "",
+              "pm.visualizer.set(template, {",
+              "    response: pm.response.json()",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "_postman_id": "1ec7baa5-5a43-41ac-932e-560e68697d3a",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"contacts\": [\n\t\t{\n\t\t\t\"name\": \"{{$randomFullName}}\",\n\t\t\t\"email\": \"{{$randomEmail}}\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"{{$randomFullName}}\",\n\t\t\t\"email\": \"{{$randomEmail}}\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"{{$randomFullName}}\",\n\t\t\t\"email\": \"{{$randomEmail}}\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"{{$randomFullName}}\",\n\t\t\t\"email\": \"{{$randomEmail}}\"\n\t\t}\n\t\t]\n}\n\t\t",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "https://postman-echo.com/post",
+        "description": "Gets randomly generated names and e-mails from postman-echo and visualizes the response body as a table."
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "3f9c930e-fcba-4278-b06b-50cd168b5df4",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "58422bd3-757a-4319-ac0f-2b114687d701",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
+}
