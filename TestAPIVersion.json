@@ -15,7 +15,7 @@
   "paths": {
     "/user": {
       "get": {
-        "summary": "Details about a user",
+        "summary": "Details about a user - changing details to check Integration",
         "operationId": "listUser",
         "tags": [
           "user"
