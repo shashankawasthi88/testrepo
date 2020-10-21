@@ -1,18 +1,18 @@
 {
   "info": {
-    "_postman_id": "684ddaf3-8c48-42a3-ad96-1d2232124a4f",
+    "_postman_id": "fbee519f-4c3e-42e7-af0e-2e1add0e8a3f",
     "name": "Testing Integrations",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
     {
       "name": "Details about a user",
-      "_postman_id": "e62887b9-48f5-4b77-b41c-1c33888d98f2",
+      "_postman_id": "658e8c51-3a47-447a-a8e1-cff384cb74e7",
       "request": {
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "{{baseUrl}}/user?id=<integer>",
+          "raw": "{{baseUrl}}/user?id=2639742",
           "host": [
             "{{baseUrl}}"
           ],
@@ -21,51 +21,19 @@
           ],
           "query": [
             {
-              "description": "(Required) ID of the user",
+              "description": {
+                "content": "(Required) ID of the user",
+                "type": "text/plain"
+              },
               "key": "id",
-              "value": "<integer>"
+              "value": "2639742"
             }
           ]
         }
       },
       "response": [
         {
-          "id": "2cbbbad0-a55f-44bf-8f88-4f7221bcd021",
-          "name": "unexpected error",
-          "originalRequest": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "{{baseUrl}}/user?id=<integer>",
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "path": [
-                "user"
-              ],
-              "query": [
-                {
-                  "key": "id",
-                  "value": "<integer>"
-                }
-              ]
-            }
-          },
-          "status": "Internal Server Error",
-          "code": 500,
-          "_postman_previewlanguage": "json",
-          "header": [
-            {
-              "key": "Content-Type",
-              "value": "application/json"
-            }
-          ],
-          "cookie": [],
-          "responseTime": null,
-          "body": "{\n \"code\": 57182404,\n \"message\": \"esse\"\n}"
-        },
-        {
-          "id": "50f24392-8655-4d1d-8102-88bd536eb86a",
+          "id": "54810028-997c-4894-9156-7afc9fc28324",
           "name": "Details about a user",
           "originalRequest": {
             "method": "GET",
@@ -88,12 +56,15 @@
           },
           "status": "OK",
           "code": 200,
-          "_postman_previewlanguage": "json",
+          "_postman_previewlanguage": "Text",
           "header": [
             {
-              "description": "A link to the next page of responses",
+              "description": {
+                "content": "A link to the next page of responses",
+                "type": "text/plain"
+              },
               "key": "x-next",
-              "value": "dolore in"
+              "value": "la"
             },
             {
               "key": "Content-Type",
@@ -102,7 +73,42 @@
           ],
           "cookie": [],
           "responseTime": null,
-          "body": "{\n \"id\": 14203702,\n \"name\": \"quis fugiat qui\",\n \"tag\": \"qui consequat in\"\n}"
+          "body": "{\n \"id\": 1429021,\n \"name\": \"laboris esse ipsum elit\",\n \"tag\": \"elit incididunt sit\"\n}"
+        },
+        {
+          "id": "7032122d-6591-4826-8b09-5dc022bc0db7",
+          "name": "unexpected error",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/user?id=<integer>",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "user"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "<integer>"
+                }
+              ]
+            }
+          },
+          "status": "Internal Server Error",
+          "code": 500,
+          "_postman_previewlanguage": "Text",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "cookie": [],
+          "responseTime": null,
+          "body": "{\n \"code\": 12915600,\n \"message\": \"in\"\n}"
         }
       ]
     }
