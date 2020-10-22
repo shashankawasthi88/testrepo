@@ -2,7 +2,7 @@
   "openapi": "3.0.0",
   "info": {
     "version": "1",
-    "title": "Test Integrations",
+    "title": "Test Integration 1",
     "license": {
       "name": "MIT"
     }
