@@ -1,0 +1,118 @@
+{
+  "info": {
+    "_postman_id": "b3b69f70-b343-4054-842f-0091f31a7099",
+    "name": "Test Integrartion - Monitor Run",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Details about a user",
+      "_postman_id": "1e8e9101-dfb5-4013-8b50-ec21be18f2ea",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/user?id=<integer>",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "user"
+          ],
+          "query": [
+            {
+              "description": "(Required) ID of the user",
+              "key": "id",
+              "value": "<integer>"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "d3ada25d-aa87-4bbc-a26f-9925952e1bc8",
+          "name": "Details about a user",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/user?id=<integer>",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "user"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "<integer>"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "description": "A link to the next page of responses",
+              "key": "x-next",
+              "value": "consectetur eiusmod elit amet"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "cookie": [],
+          "responseTime": null,
+          "body": "{\n \"id\": -9016412,\n \"name\": \"proident veniam\",\n \"tag\": \"ullamco id\"\n}"
+        },
+        {
+          "id": "f7e0b6ed-fd0d-40db-a70c-d155f6ae177a",
+          "name": "unexpected error",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/user?id=<integer>",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "user"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "<integer>"
+                }
+              ]
+            }
+          },
+          "status": "Internal Server Error",
+          "code": 500,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "cookie": [],
+          "responseTime": null,
+          "body": "{\n \"code\": -4345415,\n \"message\": \"voluptate irure\"\n}"
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "id": "baseUrl",
+      "key": "baseUrl",
+      "value": "http://petstore.swagger.io/v1",
+      "type": "string"
+    }
+  ]
+}
