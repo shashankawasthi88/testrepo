@@ -1,0 +1,40 @@
+{
+  "info": {
+    "_postman_id": "9acb5b98-e0f1-47b6-a5ac-a62b1dc00077",
+    "name": "My Collection",
+    "description": "This is a test collection!!\nTesting the webhook beta url....\nhahah lol lol lol lol lol lol lol lo hahah lol lol lol lol lol lol lol lo",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Request 1",
+      "_postman_id": "53974f98-f714-4592-89e0-fa76f2eb2635",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://www.postman-echo.com/get?param1=value1",
+          "protocol": "https",
+          "host": [
+            "www",
+            "postman-echo",
+            "com"
+          ],
+          "path": [
+            "get"
+          ],
+          "query": [
+            {
+              "key": "param1",
+              "value": "value1"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
