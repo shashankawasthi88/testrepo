@@ -1,0 +1,46 @@
+{
+  "info": {
+    "_postman_id": "8206f8eb-18cf-437b-aae2-3c00a08984a6",
+    "name": "Export V2",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get 1",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "1272393a-554f-4b1b-baea-f77b6df2a234",
+            "exec": [
+              "pm.environment.set(\"var1\", \"1\");"
+            ],
+            "type": "text/javascript"
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "3b505025-30a8-4ee2-9724-30a7f561f6de",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "_postman_id": "1a119819-5f93-4ae3-902c-a1f4bb550ed2",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "https://postman-echo.com/get"
+      },
+      "response": []
+    }
+  ]
+}
