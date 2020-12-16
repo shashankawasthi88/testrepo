@@ -1,0 +1,79 @@
+{
+  "info": {
+    "_postman_id": "49799611-fe96-4de4-88ad-fd3daa8f972d",
+    "name": "Test",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Fake XML",
+      "_postman_id": "a759a786-366d-4213-8cd5-22b66559ad02",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "This is a test",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "postman-echo.com/getxml"
+      },
+      "response": [
+        {
+          "id": "285267a7-d3fb-4a80-ab6b-ea861ba77ab0",
+          "name": "Fake XML",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "This is a test"
+            },
+            "url": "postman-echo.com/getxml"
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "xml",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Wed, 26 Aug 2020 22:03:26 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "507"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"1fb-95tLtPeXKWGGzjZnw+vgzVja2pQ\""
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "set-cookie",
+              "value": "sails.sid=s%3AcLIc8IRi7xHJBYc5BhryV5zuG3gSYe6d.as2UsoWVFTSq8iKCTDYTxRX4ysHZenDdJvVtq1%2FhPp4; Path=/; HttpOnly"
+            }
+          ],
+          "cookie": [],
+          "responseTime": null,
+          "body": "This is an example"
+        }
+      ]
+    }
+  ]
+}
