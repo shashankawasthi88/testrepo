@@ -40,7 +40,25 @@
             "value": ",./';[]}{\":?><|\\\\"
           }
         ],
-        "url": "https://postman-echo.com/headers",
+        "url": {
+          "raw": "https://postman-echo.com/headers?dummy_variable=123",
+          "protocol": "https",
+          "host": [
+            "postman-echo",
+            "com"
+          ],
+          "path": [
+            "headers"
+          ],
+          "query": [
+            {
+              "key": "dummy_variable",
+              "value": "123",
+              "description": "This is a dummy variable",
+              "type": "text"
+            }
+          ]
+        },
         "description": "A `GET` request to this endpoint returns the list of all request headers as part of the response JSON.\nIn Postman, sending your own set of headers through the [Headers tab](https://www.getpostman.com/docs/requests#headers?source=echo-collection-app-onboarding) will reveal the headers as part of the response."
       },
       "response": [
@@ -729,7 +747,7 @@
   ],
   "variable": [
     {
-      "id": "36acb2d8-0fbc-4daf-90ae-d1a220eec479",
+      "id": "62a25c62-f007-4afc-95ad-5a467fa764c9",
       "key": "my_variable",
       "value": "",
       "type": "string"
