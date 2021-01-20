@@ -12,6 +12,38 @@
       "_postman_id": "903818b3-cb55-4933-8011-0c03ce438f1d"
     },
     {
+      "name": "Test New Folder",
+      "item": [
+        {
+          "name": "just get and post",
+          "_postman_id": "a9254238-11a2-4af7-8b3e-a25c8cfdcc2b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "haha.com"
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "_postman_id": "d42d4a34-8350-4b0f-95f7-869513b3b76e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": null
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "d7221a0c-536a-4a19-aa3a-2dee8f5eeade"
+    },
+    {
       "name": "Request Headers (With special Characters)",
       "event": [
         {
@@ -1478,17 +1510,17 @@
     {
       "listen": "prerequest",
       "script": {
-        "id": "ce95f0b0-8cac-483f-ac62-ee7e97ced95a",
+        "id": "a3bad706-d006-4fc5-afa2-f2730beb66a3",
         "type": "text/javascript",
         "exec": [
-          ""
+          "//gg "
         ]
       }
     },
     {
       "listen": "test",
       "script": {
-        "id": "27961693-bfc3-4caf-8523-26cbb31959c7",
+        "id": "7f9ea2c5-10cc-4fea-967c-cf7e84265a2d",
         "type": "text/javascript",
         "exec": [
           ""
@@ -1498,7 +1530,7 @@
   ],
   "variable": [
     {
-      "id": "b70599cc-e277-442f-b8c8-44248426a34e",
+      "id": "66e54a9a-75f7-499f-ae2c-9ab8c711702e",
       "key": "my_variable",
       "value": "",
       "type": "string"
