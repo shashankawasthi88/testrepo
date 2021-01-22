@@ -1510,17 +1510,17 @@
     {
       "listen": "prerequest",
       "script": {
-        "id": "1287d526-7852-4e44-8b60-22a95b200596",
+        "id": "b584acf6-02df-4cde-810f-842befc16ed3",
         "type": "text/javascript",
         "exec": [
-          "//gg jj sdasjdsdsdsdshkjhjhjhhjhjjhjjhjjhjhjhjhjhjshjhjhjjhjhjhjjhjshjhsjhj"
+          "//gg jj sdasjdsdsdsdshkjhjhjhhjhjjhjjhjjhjhjhjhjhjshjhjhjjhjhjhj"
         ]
       }
     },
     {
       "listen": "test",
       "script": {
-        "id": "01a88f80-db6a-439b-a5cd-08b44359f89a",
+        "id": "5257f021-34a9-46fd-a0ba-bf3536b703f1",
         "type": "text/javascript",
         "exec": [
           ""
@@ -1530,7 +1530,7 @@
   ],
   "variable": [
     {
-      "id": "c0b1a6b5-3182-4ec8-af39-4c8db2cf5595",
+      "id": "90a1e208-9938-45d2-b6cb-be02a2bf2a4d",
       "key": "my_variable",
       "value": "",
       "type": "string"
