@@ -1536,7 +1536,7 @@
       "request": {
         "method": "GET",
         "header": [],
-        "url": null
+        "url": "dasda"
       },
       "response": []
     }
@@ -1565,7 +1565,7 @@
   ],
   "variable": [
     {
-      "id": "e1b8ac4c-dc60-4d1d-bc02-8237c36f595a",
+      "id": "6ef69c3c-ebea-448b-8f13-4c1d5483f1f5",
       "key": "my_variable",
       "value": "",
       "type": "string"
