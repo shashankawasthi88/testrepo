@@ -1526,6 +1526,19 @@
           "body": "{\n    \"args\": {\n        \"test\": \"Github\",\n        \"anotherone\": \"232\"\n    },\n    \"headers\": {\n        \"x-forwarded-proto\": \"https\",\n        \"x-forwarded-port\": \"443\",\n        \"host\": \"postman-echo.com\",\n        \"x-amzn-trace-id\": \"Root=1-5f4785cb-91140dece5f3a717e2fabc85\",\n        \"user-agent\": \"PostmanRuntime/7.26.4\",\n        \"accept\": \"*/*\",\n        \"cache-control\": \"no-cache\",\n        \"postman-token\": \"007e5488-31ef-4b60-a34c-322255e3e58b\",\n        \"accept-encoding\": \"gzip, deflate, br\",\n        \"cookie\": \"MyTestCookie=testCookie1; sails.sid=s%3A7Q-HUrl3sETkedNlqkq4uNZ8sZZdWurK.8kiOgcGgbGNzIwEHSkNqGsn9C9dWEzevlE4Y%2FyYWGUk\"\n    },\n    \"url\": \"https://postman-echo.com/get?test=Github&anotherone=232\"\n}"
         }
       ]
+    },
+    {
+      "name": "New Request",
+      "_postman_id": "ba88dc24-f17b-4526-b87c-a99d5926e232",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": null
+      },
+      "response": []
     }
   ],
   "event": [
@@ -1552,7 +1565,7 @@
   ],
   "variable": [
     {
-      "id": "f2f08395-cba7-43bb-9bb3-1c380ccf9382",
+      "id": "081d6b27-15c6-42c8-b52d-875126bc0b72",
       "key": "my_variable",
       "value": "",
       "type": "string"
