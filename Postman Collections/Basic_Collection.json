@@ -9,7 +9,29 @@
     {
       "name": "Trying Folder",
       "item": [],
-      "_postman_id": "903818b3-cb55-4933-8011-0c03ce438f1d"
+      "_postman_id": "903818b3-cb55-4933-8011-0c03ce438f1d",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "45ff5d25-06df-43ce-bc39-9857bd179a8c",
+            "type": "text/javascript",
+            "exec": [
+              "jjhjh"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "8952c629-6157-4550-9a7e-78876b1c1064",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
     },
     {
       "name": "Test New Folder",
@@ -1530,7 +1552,7 @@
   ],
   "variable": [
     {
-      "id": "e5ac089f-4e23-4c16-8680-b0a3cc82a6c9",
+      "id": "7eb3205c-43c5-493f-9893-6c459159e87e",
       "key": "my_variable",
       "value": "",
       "type": "string"
