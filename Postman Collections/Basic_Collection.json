@@ -38,18 +38,6 @@
       "item": [
         {
           "name": "just get and post",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "c404679a-6b41-4ba8-a320-9fe8592b7969",
-                "exec": [
-                  "//"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
           "_postman_id": "a9254238-11a2-4af7-8b3e-a25c8cfdcc2b",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -1577,7 +1565,7 @@
   ],
   "variable": [
     {
-      "id": "341bef57-bd7d-42b0-a16f-b64d2db18dc8",
+      "id": "3c163a40-3882-41c5-88c4-4deabc68e478",
       "key": "my_variable",
       "value": "",
       "type": "string"
