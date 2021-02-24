@@ -1557,17 +1557,17 @@
     {
       "listen": "prerequest",
       "script": {
-        "id": "2ef5854b-5cac-4989-be22-c2c40ebd4f44",
+        "id": "e924fbcb-78a7-497f-a65f-48b31382dbcb",
         "type": "text/javascript",
         "exec": [
-          "//gg jj sdasjdsdsdsdshkjhjhjhllljhjhhjhjhjhjhjhjkjkjkjkjkkjkj"
+          "//gg jj sdasjdsdsdsdshkjhjhjhllljhjhhjhjhjhjhjhjkjkjkjkjkkjkjjj"
         ]
       }
     },
     {
       "listen": "test",
       "script": {
-        "id": "c89e0085-8828-4f34-8950-f40de4076929",
+        "id": "baf44cf5-5d5e-42ad-bf26-583a9010f225",
         "type": "text/javascript",
         "exec": [
           ""
@@ -1577,7 +1577,7 @@
   ],
   "variable": [
     {
-      "id": "2090035b-cd80-443e-947e-759d507e8c29",
+      "id": "dcf2896b-8d02-4700-bad0-cc7377a047dd",
       "key": "my_variable",
       "value": "",
       "type": "string"
