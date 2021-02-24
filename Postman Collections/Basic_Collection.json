@@ -38,6 +38,18 @@
       "item": [
         {
           "name": "just get and post",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "c404679a-6b41-4ba8-a320-9fe8592b7969",
+                "exec": [
+                  "//"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
           "_postman_id": "a9254238-11a2-4af7-8b3e-a25c8cfdcc2b",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -1545,17 +1557,17 @@
     {
       "listen": "prerequest",
       "script": {
-        "id": "f36f271e-a15c-4e0b-8f1a-dd7744f782e4",
+        "id": "944a9021-9b6c-4c7e-ac25-0407782c1e8e",
         "type": "text/javascript",
         "exec": [
-          "//gg jj sdasjdsdsdsdshkjhjhjhhjhjjhjjhjjhjhjhjhjhjshjhjhjjhjhjhjjhjshjhsjhjkkkkkkkkkjjjhkkllkkjjkjhjkjkjkkkkkkkkklljhjjhjhjhjhjhjhhjhjhkk"
+          "//gg jj sdasjdsdsdsdshkjhjhjhlll"
         ]
       }
     },
     {
       "listen": "test",
       "script": {
-        "id": "02e22418-5847-4ca3-af8c-a6d571d42759",
+        "id": "96cf0a3b-6ddb-4e87-8886-bdd0d1d377f7",
         "type": "text/javascript",
         "exec": [
           ""
@@ -1565,7 +1577,7 @@
   ],
   "variable": [
     {
-      "id": "bbf8ff5c-2793-4292-8de8-b1913283ce63",
+      "id": "ab498016-0f80-48fc-b0da-8e0363be26b3",
       "key": "my_variable",
       "value": "",
       "type": "string"
