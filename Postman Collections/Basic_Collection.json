@@ -11,18 +11,6 @@
       "item": [
         {
           "name": "New Request-123",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "067aca4d-38a7-4aa1-9cff-d927f91b331d",
-                "exec": [
-                  "// hhhhhhhhh"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
           "_postman_id": "b25b62b5-ab5f-4efc-acb1-c6f6ee8f002c",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -1603,7 +1591,7 @@
   ],
   "variable": [
     {
-      "id": "024144aa-7c3a-485d-8635-8c91e32c2790",
+      "id": "fd9aa91a-fb28-46e6-a879-a7ef2f5efefa",
       "key": "my_variable",
       "value": "",
       "type": "string"
