@@ -10,7 +10,7 @@
       "name": "Trying Folder",
       "item": [
         {
-          "name": "New Request",
+          "name": "New Request-123",
           "_postman_id": "b25b62b5-ab5f-4efc-acb1-c6f6ee8f002c",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -1591,7 +1591,7 @@
   ],
   "variable": [
     {
-      "id": "00935461-45f0-4fe4-b0ed-81f7ef6e2516",
+      "id": "3733d7df-29c6-4755-a457-408c1ed46f5a",
       "key": "my_variable",
       "value": "",
       "type": "string"
