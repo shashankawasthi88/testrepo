@@ -1,1 +1,122 @@
-{"info":{"_postman_id":"ea5d8fea-0e4b-4358-bc85-823f3fe275e5","name":"TestSuite","schema":"https://schema.getpostman.com/json/collection/v2.1.0/collection.json"},"item":[{"name":"Sample endpoint: Returns details about a particular user Changed - Changed from the repo","id":"9067dd99-ee55-4892-b9ec-6520990aa50d","request":{"method":"GET","header":[],"url":{"raw":"{{baseUrl}}/user?id=11905131","host":["{{baseUrl}}"],"path":["user"],"query":[{"key":"id","value":"11905131","description":"(Required) ID of the user"}]}},"response":[{"id":"092dab3a-6fba-42f6-8afc-8434eebe2438","name":"Sample response: Details about a user by ID","originalRequest":{"method":"GET","header":[],"url":{"raw":"{{baseUrl}}/user?id=11905131","host":["{{baseUrl}}"],"path":["user"],"query":[{"key":"id","value":"11905131"}]}},"status":"OK","code":200,"_postman_previewlanguage":"json","header":[{"disabled":false,"description":"A link to the next page of responses","key":"x-next","value":"aliquip ea voluptate"},{"key":"Content-Type","value":"application/json"}],"cookie":[],"responseTime":null,"body":"{\n \"id\": 75401962,\n \"name\": \"aliqua occaecat\",\n \"tag\": \"culpa exercitation laboris\"\n}"},{"id":"516ca73b-8889-46fe-aa8b-89cc6b7b4365","name":"Unexpected error","originalRequest":{"method":"GET","header":[],"url":{"raw":"{{baseUrl}}/user?id=11905131","host":["{{baseUrl}}"],"path":["user"],"query":[{"key":"id","value":"11905131"}]}},"status":"Internal Server Error","code":500,"_postman_previewlanguage":"json","header":[{"key":"Content-Type","value":"application/json"}],"cookie":[],"responseTime":null,"body":"{\n \"code\": 97093092,\n \"message\": \"laborum sed\"\n}"}]}],"variable":[{"id":"de872dd6-142c-489c-bd4c-bf2c1daccb65","key":"baseUrl","value":"http://localhost:3000","type":"string"}]}
+{
+	"info": {
+		"_postman_id": "214ee2a1-2b41-4bbf-9ca9-3d3c91e51014",
+		"name": "TestSuite",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "12420868-214ee2a1-2b41-4bbf-9ca9-3d3c91e51014"
+	},
+	"item": [
+		{
+			"name": "Sample endpoint: Returns details about a particular user Changed - Changed from the repo",
+			"id": "15b8490b-0286-488f-b521-03d97c7506de",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/user?id=11905131",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "11905131",
+							"description": "(Required) ID of the user"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "b2dd42d8-0d7f-41a0-b2ce-d336239e9272",
+					"name": "Sample response: Details about a user by ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/user?id=11905131",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "11905131"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"disabled": false,
+							"description": "A link to the next page of responses",
+							"key": "x-next",
+							"value": "aliquip ea voluptate"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n \"id\": 75401962,\n \"name\": \"aliqua occaecat\",\n \"tag\": \"culpa exercitation laboris\"\n}"
+				},
+				{
+					"id": "df3c80d7-ef0b-4b88-8722-abc342157116",
+					"name": "Unexpected error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/user?id=11905131",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "11905131"
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n \"code\": 97093092,\n \"message\": \"laborum sed\"\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"id": "de872dd6-142c-489c-bd4c-bf2c1daccb65",
+			"key": "baseUrl",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
